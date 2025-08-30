@@ -1,0 +1,33 @@
+html, body {
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	overflow: hidden;
+	background-color: aliceblue;
+}
+
+h1 {
+	text-align: center;
+}
+
+main {
+	height: 95%;
+	width: 90%;
+	margin: 0 auto;
+	/*border: 1px solid red;*/
+}
+
+#canvas-container {
+	margin: 0 auto;
+	width: fit-content;
+}
+
+#canvas {
+	/*height: 80%;*/
+	/*width: 60%;*/
+	background-color: white;
+	border: 1px darkgrey inset;
+}
