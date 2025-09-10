@@ -9,15 +9,24 @@ const getRandomColor = () => {
 	return `rgb(${r},${g},${b})`;
 }
 
+// check this page for ideas of how to implement my goal:
+// as long as the mouse is held down, the radius of the dot should grow bigger
+// https://stackoverflow.com/questions/15505272/javascript-while-mousedown
+
+const drawDot = (x, y, radius, color) => {
+	ctx.beginPath();
+	ctx.arc(x, y, radius, 0, Math.PI * 2);
+	ctx.fillStyle = color;
+	ctx.fill();
+}
+
 const dot = (x, y) => {
 	if (!canvas.getContext) {
 		console.log("Canvas is not supported");
 		return;
 	}
-	ctx.beginPath();
-	ctx.arc(x, y, 10, 0, Math.PI * 2);
-	ctx.fillStyle = getRandomColor();
-	ctx.fill();
+	const color = getRandomColor();
+	drawDot(x, y, 5, color);
 }
 
 canvas.addEventListener("click", (e) => {
